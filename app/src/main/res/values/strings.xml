@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Life Balance</string>
-    <string name="work">Work</string>
+    <string name="job">Job</string>
     <string name="social_life">Social Life</string>
     <string name="sleep">Sleep</string>
     <string name="off">OFF</string>
     <string name="on">ON</string>
+    <string name="normal_life">Normal Life</string>
+    <string name="made_by_amit_singh">Made by: Amit Singh</string>
 </resources>
