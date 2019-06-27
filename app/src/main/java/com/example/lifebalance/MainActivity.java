@@ -27,18 +27,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    lSwitchJob.setTextColor(getResources().getColor(R.color.primaryBlack));
-                    if (lSwitchSleep.isChecked()){
-                        Log.w(Tag,"WORK");
-                        lSwitchSocialWork.setChecked(false);
-                    }
 
+                    if(lSwitchSocialWork.isChecked())
+                    {
+                        lSwitchSocialWork.setChecked(true);
+                        lSwitchSleep.setChecked(false);
+                    }
+                    else if(lSwitchSleep.isChecked())
+                    {
+                        lSwitchSocialWork.setChecked(false);
+                        lSwitchSleep.setChecked(true);
+                    }
                 }
-                else{
-                    Log.w(Tag, "else WORK");
-                    lSwitchJob.setTextColor(getResources().getColor(R.color.grayfifty));
+                else
+                {
                     lSwitchSocialWork.setChecked(true);
-//                    lSwitchSleep.setChecked(true);
+                    lSwitchSleep.setChecked(true);
                 }
             }
         });
@@ -46,17 +50,22 @@ public class MainActivity extends AppCompatActivity {
         lSwitchSocialWork.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    lSwitchSocialWork.setTextColor(getResources().getColor(R.color.primaryBlack));
-                    if (lSwitchJob.isChecked() && lSwitchSleep.isChecked()){
-                        Log.w(Tag,"SOCIAL");
+                if(isChecked){
+                    if(lSwitchSleep.isChecked())
+                    {
                         lSwitchJob.setChecked(false);
+                        lSwitchSleep.setChecked(true);
                     }
-                }else {
-                    lSwitchSocialWork.setTextColor(getResources().getColor(R.color.grayfifty));
-                    Log.w(Tag,"ELSE SOCIAL");
-                    lSwitchJob.setChecked(true);
+                    else if(lSwitchJob.isChecked())
+                    {
+                        lSwitchSleep.setChecked(false);
+                        lSwitchJob.setChecked(true);
+                    }
+                }
+                else
+                {
                     lSwitchSleep.setChecked(true);
+                    lSwitchJob.setChecked(true);
                 }
             }
         });
@@ -64,19 +73,28 @@ public class MainActivity extends AppCompatActivity {
         lSwitchSleep.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    lSwitchSleep.setTextColor(getResources().getColor(R.color.primaryBlack));
-                    if (lSwitchSocialWork.isChecked()){
-                        Log.w(Tag,"SLEEP");
+                if(isChecked){
+
+                    if(lSwitchJob.isChecked())
+                    {
                         lSwitchSocialWork.setChecked(false);
+                        lSwitchJob.setChecked(true);
                     }
-                }else{
-                    lSwitchSleep.setTextColor(getResources().getColor(R.color.grayfifty));
-                    Log.w(Tag,"ELSE SLEEP");
-                    lSwitchSocialWork.setChecked(true);
-                    lSwitchJob.setChecked(true);
+                    else if(lSwitchSocialWork.isChecked())
+                    {
+                        lSwitchJob.setChecked(false);
+                        lSwitchSocialWork.setChecked(true);
+                    }
                 }
+                else
+                {
+                    lSwitchJob.setChecked(true);
+                    lSwitchSocialWork.setChecked(true);
+                }
+
             }
         });
+
+
     }
 }
