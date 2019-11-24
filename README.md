@@ -1,3 +1,17 @@
 #  Android Activity
 
-Android activity is work like human activity. human start day with some activity so like that whenever you open any android app that will start from Activity. The activity is a important part of the human life so like that activity is a component of the android app. Human see any beautiful thinks which is represents a object his mind(so human eyes work like a UI and human brain like a java logic) so android represents a single screen with UI. activity is entrypoint for the android users. activity have many callback functions.
+Android Activity is a represent single screen which your user can perform task Through UI controler.
+
+An app usally consists of multiple screen that are loosely bound to each other. each screen is an activity. Typically, one activity in an app is specified as the main Activity.
+Each time a new activity start. Activity have callback function which is represent Activity screen state.
+1. onCreate();
+2. onStart();
+3. onResume();
+4. onPuse();
+5. onStop();
+6. onDestroy();
+
+#Intent
+
+An activity is started or Activated with an Intent. Intent is asynchronus message which is you can use in your Activity an action perform from amother activity or from some other app component.
+An Intent can be explicit and implicit:
