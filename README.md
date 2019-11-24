@@ -11,7 +11,6 @@ Each time a new activity start. Activity have callback function which is represe
 5. onStop();
 6. onDestroy();
 
-#Intent
-
+Intent:
 An activity is started or Activated with an Intent. Intent is asynchronus message which is you can use in your Activity an action perform from amother activity or from some other app component.
 An Intent can be explicit and implicit:
