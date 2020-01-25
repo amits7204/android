@@ -1,3 +1,8 @@
+# Android Manifest
+
+The manifest presents essential imformation about your application to the android build tools, android operating systems and google Play
+
+
 #  Android Activity
 
 Android Activity is a represent single screen which your user can perform task Through UI controler.
